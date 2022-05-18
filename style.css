@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+body {
+  height: 100vh;
+  margin: auto;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://www.adobe.com/express/discover/ideas/media_1483fecf0d52faee223048b62241579ac427a6f1a.png?width=750&format=png&optimize=medium");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 4rem;
+}
+
+main {
+  width: 100%;
+  margin-top: 15rem;
+  text-align: center;
+}
+
+.countdown {
+  height: 50vh;
+}
+
+.container {
+  display: grid;
+  margin-top: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+h1 {
+  font-size: 5rem;
+  text-align: center;
+  text-shadow: 2px 2px 2px red;
+}
+
+h2 {
+  font-size: 4rem;
+  text-shadow: 2px 2px 2px red;
+}
+
+@media (max-width: 800px) {
+  h1,
+  h2,
+  div {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  main {
+    margin-top: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .countdown {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .days,
+  .hours,
+  .minutes,
+  .seconds {
+    text-align: center;
+  }
+  h2 {
+    text-align: left;
+  }
+  h1,
+  h2,
+  div {
+    font-size: 2.5rem;
+  }
+}
